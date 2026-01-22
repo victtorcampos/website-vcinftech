@@ -1,5 +1,5 @@
 # VCINF TECH - Landing Page
-
+ 
 ## Overview
 
 This document outlines the plan for creating the landing page for "VCINF TECH", a technology services company. The goal is to create a visually appealing and informative single-page website that showcases the company's services and expertise.
