@@ -1,8 +1,12 @@
 import React from 'react';
 
-export function LogoIcon() {
+interface LogoIconProps {
+  className?: string;
+}
+
+export function LogoIcon({ className }: LogoIconProps) {
   return (
-    <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
+    <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" className={className || "h-8 w-auto"}>
       {/* poligono */}
       <path fill="#26444f" fillRule="evenodd" d="M 40 20 L 160 20 L 160 125 L 120 160 L 40 94 Z M 75 60 L 120 60 L 120 100 Z"/>
       {/* hexágono */}
