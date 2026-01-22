@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { HydrationFix } from "@/components/HydrationFix";
 import { Navbar } from "@/components/Navbar";
 import "./globals.css";
 
@@ -11,37 +12,15 @@ export const metadata: Metadata = {
   description: "Soluções Completas em Hardware e Inteligência Fiscal",
 };
 
-const AntiFlickerScript = () => {
-  const script = `
-    (function() {
-      try {
-        var theme = localStorage.getItem('theme');
-        if (theme) {
-          document.documentElement.setAttribute('data-theme', theme);
-        } else {
-          var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-          if (darkQuery.matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-          } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-          }
-        }
-      } catch (e) {}
-    })();
-  `;
-  return <script dangerouslySetInnerHTML={{ __html: script }} />;
-};
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body>
-        <AntiFlickerScript />
+        <HydrationFix />
         <ThemeProvider>
           <Navbar />
           <main className={inter.className}>{children}</main>
