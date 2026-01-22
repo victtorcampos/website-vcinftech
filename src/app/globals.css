@@ -1,9 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-link: var(--link);
+}
 
 :root {
-  /* Light Theme - Corporativo & Limpo */
   --background: #f5f2f0;
   --foreground: #0f1518;
   --primary: #26444f;
@@ -15,7 +23,6 @@
 }
 
 [data-theme="dark"] {
-  /* Dark Theme - Tech & Imersivo */
   --background: #0a0e11;
   --foreground: #f5f2f0;
   --primary: #4a8094;
