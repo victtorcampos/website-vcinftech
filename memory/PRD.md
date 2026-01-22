@@ -54,8 +54,17 @@ src/
    - Removido AntiFlickerScript inline
    - Adicionado suppressHydrationWarning no html
 
-3. **CSS Variables atualizadas**
-   - --primary-foreground para contraste nos botões
+3. **Página Inicial Completa**
+   - Hero Section com headline, stats e CTAs
+   - Services Grid com 4 cards de especialidades
+   - Info Bar com localização e contato
+   - Footer com colunas de links e copyright
+
+4. **Backend GraphQL (Apollo Server)**
+   - Endpoint: `/api/graphql`
+   - Query inicial: `hello` → "Hello World!"
+   - Estrutura escalável em `src/graphql/`
+   - Introspection habilitado para testes
 
 ## User Personas
 - **Clientes empresariais:** Buscam soluções em hardware e inteligência fiscal
