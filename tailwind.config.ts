@@ -13,7 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         primary: {
           DEFAULT: "var(--primary)",
-          foreground: "var(--background)",
+          foreground: "var(--primary-foreground)",
         },
         secondary: "var(--secondary)",
         accent: {
