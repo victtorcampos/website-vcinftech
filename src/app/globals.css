@@ -2,7 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Light Theme - Corporativo & Limpo */
+  --background: #f5f2f0;  /* Off-white premium */
+  --foreground: #0f1518;  /* Texto base quase preto */
+  --primary: #26444f;     /* Azul Petróleo (Logo) - Títulos */
+  --secondary: #355a6c;   /* Azul Médio - Bordas/Subtítulos */
+  --accent: #26444f;      /* Botões */
+  --accent-foreground: #f5f2f0; /* Texto do botão */
+  --link: #355a6c;        /* Links */
+}
+
+[data-theme="dark"] {
+  /* Dark Theme - Tech & Imersivo */
+  --background: #0a0e11;  /* Mais escuro que o slate original para contraste */
+  --foreground: #f5f2f0;  /* Off-white vira texto */
+  --primary: #4a8094;     /* Versão clara do azul para contraste em fundo escuro */
+  --secondary: #6b8e9e;   /* Cinza azulado */
+  --accent: #355a6c;      /* Botões no escuro */
+  --accent-foreground: #ffffff;
+  --link: #8bcbe3;        /* Ciano desaturado para brilhar no escuro */
+}
+
 body {
-  background-color: #0f1518;
-  color: #f5f2f0;
+  background-color: var(--background);
+  color: var(--foreground);
 }
