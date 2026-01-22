@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Navbar } from "@/components/Navbar";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -43,9 +43,7 @@ export default function RootLayout({
       <body>
         <AntiFlickerScript />
         <ThemeProvider>
-          <header className="fixed top-4 right-4 z-50">
-             <ThemeToggle />
-          </header>
+          <Navbar />
           <main className={inter.className}>{children}</main>
         </ThemeProvider>
       </body>
